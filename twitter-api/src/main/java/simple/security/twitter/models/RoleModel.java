@@ -1,10 +1,11 @@
 package simple.security.twitter.models;
 
 import jakarta.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
 import simple.security.twitter.enums.RoleName;
 
 @Entity(name = "tb_roles")
-public class RoleModel {
+public class RoleModel implements GrantedAuthority {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,5 +29,10 @@ public class RoleModel {
 
     public void setName(RoleName name) {
         this.name = name;
+    }
+
+    @Override
+    public String getAuthority() {
+        return this.name.toString();
     }
 }
