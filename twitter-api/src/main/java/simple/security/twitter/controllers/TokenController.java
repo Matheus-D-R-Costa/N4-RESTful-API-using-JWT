@@ -1,25 +1,27 @@
 package simple.security.twitter.controllers;
 
 import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import simple.security.twitter.dtos.LoginRequestDto;
 import simple.security.twitter.dtos.LoginResponseDto;
+import simple.security.twitter.services.TokenService;
 
 @RestController
 public class TokenController {
 
-    private final JwtEncoder encoder;
+    private final TokenService tokenService;
 
-    public TokenController(JwtEncoder encoder) {
-        this.encoder = encoder;
+    public TokenController(TokenService tokenService) {
+        this.tokenService = tokenService;
     }
 
     @PostMapping("/login")
     public ResponseEntity<LoginResponseDto> login(@RequestBody @Valid LoginRequestDto loginRequestDto) {
-
+        return ResponseEntity.status(HttpStatus.ACCEPTED).body(tokenService.login(loginRequestDto));
     }
+
 }
