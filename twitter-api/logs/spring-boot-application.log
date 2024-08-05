@@ -1,0 +1,84 @@
+2024-08-05 17:07:58 - Starting Application using Java 22 with PID 41455 (/home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api/build/classes/java/main started by tteu in /home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api)
+2024-08-05 17:07:58 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-05 17:07:58 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 17:07:59 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-05 17:07:59 - Finished Spring Data repository scanning in 35 ms. Found 3 JPA repository interfaces.
+2024-08-05 17:07:59 - Tomcat initialized with port 8080 (http)
+2024-08-05 17:07:59 - Starting service [Tomcat]
+2024-08-05 17:07:59 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-05 17:07:59 - Initializing Spring embedded WebApplicationContext
+2024-08-05 17:07:59 - Root WebApplicationContext: initialization completed in 783 ms
+2024-08-05 17:07:59 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-05 17:07:59 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-05 17:07:59 - HHH000026: Second-level cache disabled
+2024-08-05 17:07:59 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-05 17:07:59 - HikariPool-1 - Starting...
+2024-08-05 17:08:00 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@632c3f55
+2024-08-05 17:08:00 - HikariPool-1 - Start completed.
+2024-08-05 17:08:00 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-05 17:08:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:08:01 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-05 17:08:01 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-05 17:08:01 - Started Application in 2.87 seconds (process running for 3.219)
+2024-08-05 17:08:06 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-05 17:08:06 - Initializing Servlet 'dispatcherServlet'
+2024-08-05 17:08:06 - Completed initialization in 1 ms
+2024-08-05 17:09:36 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:09:36 - HikariPool-1 - Shutdown initiated...
+2024-08-05 17:09:36 - HikariPool-1 - Shutdown completed.
+2024-08-05 17:09:53 - Starting Application using Java 22 with PID 41854 (/home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api/build/classes/java/main started by tteu in /home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api)
+2024-08-05 17:09:53 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-05 17:09:53 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 17:09:53 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-05 17:09:53 - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-08-05 17:09:54 - Tomcat initialized with port 8080 (http)
+2024-08-05 17:09:54 - Starting service [Tomcat]
+2024-08-05 17:09:54 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-05 17:09:54 - Initializing Spring embedded WebApplicationContext
+2024-08-05 17:09:54 - Root WebApplicationContext: initialization completed in 758 ms
+2024-08-05 17:09:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-05 17:09:54 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-05 17:09:54 - HHH000026: Second-level cache disabled
+2024-08-05 17:09:54 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-05 17:09:54 - HikariPool-1 - Starting...
+2024-08-05 17:09:54 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ffa7041
+2024-08-05 17:09:54 - HikariPool-1 - Start completed.
+2024-08-05 17:09:55 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-05 17:09:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:09:55 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-05 17:09:56 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-05 17:09:56 - Started Application in 2.865 seconds (process running for 3.214)
+2024-08-05 17:09:59 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-05 17:09:59 - Initializing Servlet 'dispatcherServlet'
+2024-08-05 17:09:59 - Completed initialization in 1 ms
+2024-08-05 17:11:51 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:11:51 - HikariPool-1 - Shutdown initiated...
+2024-08-05 17:11:51 - HikariPool-1 - Shutdown completed.
+2024-08-05 17:12:05 - Starting Application using Java 22 with PID 42445 (/home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api/build/classes/java/main started by tteu in /home/tteu/Documentos/projectsGitHub/N4-RESTful-API-using-JWT/twitter-api)
+2024-08-05 17:12:05 - Running with Spring Boot v3.3.2, Spring v6.1.11
+2024-08-05 17:12:05 - No active profile set, falling back to 1 default profile: "default"
+2024-08-05 17:12:06 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-05 17:12:06 - Finished Spring Data repository scanning in 33 ms. Found 3 JPA repository interfaces.
+2024-08-05 17:12:06 - Tomcat initialized with port 8080 (http)
+2024-08-05 17:12:06 - Starting service [Tomcat]
+2024-08-05 17:12:06 - Starting Servlet engine: [Apache Tomcat/10.1.26]
+2024-08-05 17:12:06 - Initializing Spring embedded WebApplicationContext
+2024-08-05 17:12:06 - Root WebApplicationContext: initialization completed in 767 ms
+2024-08-05 17:12:06 - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-05 17:12:06 - HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-05 17:12:06 - HHH000026: Second-level cache disabled
+2024-08-05 17:12:07 - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-05 17:12:07 - HikariPool-1 - Starting...
+2024-08-05 17:12:07 - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ffa7041
+2024-08-05 17:12:07 - HikariPool-1 - Start completed.
+2024-08-05 17:12:07 - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-05 17:12:07 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:12:08 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-05 17:12:08 - Tomcat started on port 8080 (http) with context path '/'
+2024-08-05 17:12:08 - Started Application in 2.866 seconds (process running for 3.258)
+2024-08-05 17:12:19 - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-05 17:12:19 - Initializing Servlet 'dispatcherServlet'
+2024-08-05 17:12:19 - Completed initialization in 1 ms
+2024-08-05 17:12:40 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-05 17:12:40 - HikariPool-1 - Shutdown initiated...
+2024-08-05 17:12:40 - HikariPool-1 - Shutdown completed.
