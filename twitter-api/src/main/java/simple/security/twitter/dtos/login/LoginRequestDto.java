@@ -1,4 +1,4 @@
-package simple.security.twitter.dtos;
+package simple.security.twitter.dtos.login;
 
 import jakarta.validation.constraints.NotBlank;
 

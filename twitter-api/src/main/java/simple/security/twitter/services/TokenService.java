@@ -7,13 +7,15 @@ import org.springframework.security.oauth2.jwt.JwtClaimsSet;
 import org.springframework.security.oauth2.jwt.JwtEncoder;
 import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
 import org.springframework.stereotype.Service;
-import simple.security.twitter.dtos.LoginRequestDto;
-import simple.security.twitter.dtos.LoginResponseDto;
+import simple.security.twitter.dtos.login.LoginRequestDto;
+import simple.security.twitter.dtos.login.LoginResponseDto;
+import simple.security.twitter.models.RoleModel;
 import simple.security.twitter.models.UserModel;
 import org.slf4j.Logger;
 
 import java.time.Instant;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class TokenService {
@@ -56,12 +58,18 @@ public class TokenService {
 
     private JwtClaimsSet createJwtClaims(UUID userId, Long expiresIn) {
         var now = Instant.now();
+        var scopes = userService.findById(userId).getRoles()
+                .stream()
+                .map(RoleModel::getName)
+                .map(Enum::toString)
+                .collect(Collectors.toList());
 
         return JwtClaimsSet.builder()
-                .issuer("twiiter-api")
+                .issuer("twitter-api")
                 .subject(userId.toString())
                 .issuedAt(now)
                 .expiresAt(now.plusSeconds(expiresIn))
+                .claim("roles", scopes)
                 .build();
 
     }

@@ -2,7 +2,8 @@ package simple.security.twitter.models;
 
 import jakarta.persistence.*;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import simple.security.twitter.dtos.LoginRequestDto;
+import simple.security.twitter.dtos.login.LoginRequestDto;
+import simple.security.twitter.enums.RoleName;
 
 import java.util.Set;
 import java.util.UUID;
@@ -61,5 +62,9 @@ public class UserModel {
 
     public boolean isLoginCorrect(LoginRequestDto loginRequestDto, PasswordEncoder passwordEncoder) {
         return passwordEncoder.matches(loginRequestDto.password(), this.password);
+    }
+
+    public boolean isAdmin() {
+        return this.roles.stream().anyMatch(role -> role.getName().equals(RoleName.ROLE_ADMIN));
     }
 }
