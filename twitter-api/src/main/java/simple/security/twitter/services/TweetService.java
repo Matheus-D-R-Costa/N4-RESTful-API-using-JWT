@@ -1,23 +1,16 @@
 package simple.security.twitter.services;
 
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Sort;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationToken;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import simple.security.twitter.dtos.FeedDto;
-import simple.security.twitter.dtos.FeedItemDto;
 import simple.security.twitter.dtos.TweetDto;
 import simple.security.twitter.models.TweetModel;
 import simple.security.twitter.models.UserModel;
 import simple.security.twitter.repositories.TweetRepository;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Service
 public class TweetService {

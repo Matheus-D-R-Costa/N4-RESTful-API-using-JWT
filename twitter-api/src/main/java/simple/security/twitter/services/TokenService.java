@@ -1,6 +1,5 @@
 package simple.security.twitter.services;
 
-import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.oauth2.jwt.JwtClaimsSet;
@@ -11,7 +10,6 @@ import simple.security.twitter.dtos.login.LoginRequestDto;
 import simple.security.twitter.dtos.login.LoginResponseDto;
 import simple.security.twitter.models.RoleModel;
 import simple.security.twitter.models.UserModel;
-import org.slf4j.Logger;
 
 import java.time.Instant;
 import java.util.UUID;
@@ -19,8 +17,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class TokenService {
-
-    private static final Logger logger = LoggerFactory.getLogger(TokenService.class);
 
     private final UserService userService;
     private final BCryptPasswordEncoder passwordEncoder;
@@ -33,27 +29,20 @@ public class TokenService {
     }
 
     public LoginResponseDto login(LoginRequestDto loginRequestDto) {
-        logger.info("Attempting to authenticate user: {}", loginRequestDto.username());
         UserModel user = userService.findByUsername(loginRequestDto.username());
         if (user == null) {
-            logger.error("User not found: {}", loginRequestDto.username());
             throw new BadCredentialsException("User or password is invalid!");
         }
         if (!user.isLoginCorrect(loginRequestDto, passwordEncoder)) {
-            logger.error("Invalid password for user: {}", loginRequestDto.username());
             throw new BadCredentialsException("user or password is invalid!");
         }
 
-        logger.info("User authenticated successfully: {}", loginRequestDto.username());
         var expiresIn = 300L;
         var claims = createJwtClaims(user.getId(), expiresIn);
 
         var jwt = jwtEncoder.encode(JwtEncoderParameters.from(claims)).getTokenValue();
 
-        logger.info("Generated JWT for user: {}", loginRequestDto.username());
-
         return new LoginResponseDto(jwt, expiresIn);
-
     }
 
     private JwtClaimsSet createJwtClaims(UUID userId, Long expiresIn) {
@@ -73,6 +62,5 @@ public class TokenService {
                 .build();
 
     }
-
 
 }
