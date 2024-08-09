@@ -11,3 +11,13 @@ utilizando autenticação e autorização com token JWT.
 * Spring Boot
 * Spring Security 6
 * OAuth2 Resource Server
+* Postgresql
+
+## Autenticação
+
+![autenticacao](https://raw.githubusercontent.com/Matheus-D-R-Costa/N4-RESTful-API-using-JWT/main/autentica%C3%A7%C3%A3o.png)
+
+## Autorização
+
+![autorizacao](https://raw.githubusercontent.com/Matheus-D-R-Costa/N4-RESTful-API-using-JWT/main/autoriza%C3%A7%C3%A3o.png)
+
